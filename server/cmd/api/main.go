@@ -8,6 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"github.com/nathanmintegui/edina/internal/database"
+	"github.com/nathanmintegui/edina/internal/http"
 
 	"github.com/joho/godotenv"
 )
@@ -30,6 +31,7 @@ func main() {
   defer conn.Close()
 
   r := gin.Default()
+  http.SetRoutes(r)
 
   r.Run()
 }
