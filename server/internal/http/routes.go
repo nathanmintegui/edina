@@ -11,4 +11,3 @@ func SetRoutes(g *gin.Engine) {
 		c.Status(http.StatusOK)
 	})
 }
-
